@@ -73,17 +73,17 @@ spec:
             - name: APP_PROFILE
               valueFrom:
                 configMapKeyRef:
-                  name: {{ include "java-application.fullname" }}
+                  name: {{ include "java-application.fullname" . }}
                   key: java-app-profile
             - name: KAFKA_BROKER
               valueFrom:
                 configMapKeyRef:
-                  name: {{ include "java-application.fullname" }}
+                  name: {{ include "java-application.fullname" . }}
                   key: java-app-kafka-broker
             - name: SCHEMA_REGITRY_URL
               valueFrom:
                 configMapKeyRef:
-                  name: {{ include "java-application.fullname" }}
+                  name: {{ include "java-application.fullname" . }}
                   key: java-app-schema-registry-url
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
