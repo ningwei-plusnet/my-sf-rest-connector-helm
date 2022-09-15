@@ -8,9 +8,9 @@ java:
     repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.2.0"
+    tag: "0.2.1"
   replicaCount: 1
-  appProfile: dev
+  appProfile: default
   sfUser: "api@plusnet.de.dev"
   sfPassword: "Wi131#M8lN1_"
   sfToken: "b6mMIcXzUo5P4I5eHB685Y0h2"
