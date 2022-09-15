@@ -13,8 +13,8 @@ java:
   appProfile: default
   sfUser: "api@plusnet.de.dev"
   sfPassword: "Wi131#M8lN1_"
-  sfToken: "b6mMIcXzUo5P4I5eHB685Y0h2"
-  sfEndpoint: "https://mona.cleo.plusnet.de/remote/plusnet--dev.my.salesforce.com"
+  sfToken: "E3RCo8zsj9OAJyjCtdgG6FsB4"
+  sfEndpoint: "https://mona.cleo.plusnet.de/remote/plusnet--dev.sandbox.my.salesforce.com"
   kafkaBroker: "kafka.svccleo.plusk.plusnet.de:31090"
   schemaRegistryUrl: "http://kafka-schema.soacleo.plusk.plusnet.de"
   kafkaProductionApiKey: ""
