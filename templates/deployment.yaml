@@ -45,11 +45,46 @@ spec:
                 secretKeyRef:
                   name: {{ include "java-application.fullname" . }}
                   key: java-app-sf-token-secret
+            - name: KAFKA_PRODUCTION_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: java-app-secret-kafka-production-api-key
+            - name: KAFKA_PRODUCTION_API_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: java-app-secret-kafka-production-api-secret
+            - name: SCHEMA_REGITRY_PRODUCTION_AUTH_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: java-app-secret-schema-registry-production-auth-key
+            - name: SCHEMA_REGITRY_PRODUCTION_AUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: java-app-secret-schema-registry-production-auth-secret
             - name: SF_SERVER_ENDPOINT
               valueFrom:
                 configMapKeyRef:
                   name: {{ include "java-application.fullname" . }}
                   key: java-app-sf-endpoint
+            - name: APP_PROFILE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" }}
+                  key: java-app-profile
+            - name: KAFKA_BROKER
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" }}
+                  key: java-app-kafka-broker
+            - name: SCHEMA_REGITRY_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" }}
+                  key: java-app-schema-registry-url
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.java.image.repository }}:{{ .Values.java.image.tag | default .Chart.AppVersion }}"

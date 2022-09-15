@@ -11,17 +11,17 @@ java:
     # Overrides the image tag whose default is the chart appVersion.
     tag: "0.2.0"
   replicaCount: 1
-  appProfile: dev
-  sfUser: "api@plusnet.de.dev"
-  sfPassword: "Wi131#M8lN1_"
-  sfToken: "b6mMIcXzUo5P4I5eHB685Y0h2"
-  sfEndpoint: "https://mona.cleo.plusnet.de/remote/plusnet--dev.my.salesforce.com"
-  kafkaBroker: "kafka.svccleo.plusk.plusnet.de:31090"
-  schemaRegistryUrl: "http://kafka-schema.soacleo.plusk.plusnet.de"
-  kafkaProductionApiKey: ""
-  kafkaProductionApiSecret: ""
-  schemaRegistryProductionAuthKey: ""
-  schemaRegistryProductionAuthSecret: ""
+  appProfile: prod
+  sfUser: "api02@plusnet.de"
+  sfPassword: "Im-1R8mBAll"
+  sfToken: "yeyzP5W41KQHEQQJquHw5zR5C"
+  sfEndpoint: "https://mona.plusnet.de/remote/plusnet.my.salesforce.com"
+  kafkaBroker: "lkc-k8y0w6-p2r4m6.westeurope.azure.glb.confluent.cloud:9092"
+  schemaRegistryUrl: "https://mona.plusnet.de/remote/schemaRegistry"
+  kafkaProductionApiKey: "K6VWWOJULUV5GQ6B"
+  kafkaProductionApiSecret: "ubC+ZP5WGkiMWcOIOyISzAvmAV438F7JLQaFEQIoCgxsZz8S6HUozpvDOggJ9FbU"
+  schemaRegistryProductionAuthKey: "VWXD77DX6HLRL6H2"
+  schemaRegistryProductionAuthSecret: "7knkL0v4TU11xqA+xQLDSSzbfT3weUMn/BAfAnygmatEEvV/qiaGYJZT1VZN8818"
 
 imagePullSecrets: []
 nameOverride: ""

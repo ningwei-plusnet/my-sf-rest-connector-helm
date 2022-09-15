@@ -6,3 +6,7 @@ metadata:
     {{- include "java-application.labels" . | nindent 4 }}
 data:
   java-app-sf-endpoint: {{ .Values.java.sfEndpoint | quote }}
+  java-app-profile: {{ .Values.java.appProfile | quote }}
+  java-app-kafka-broker: {{ .Values.java.kafkaBroker | quote }}
+  java-app-schema-registry-url: {{ .Values.java.schemaRegistryUrl | quote }}
+
