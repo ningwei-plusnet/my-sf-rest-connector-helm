@@ -85,6 +85,16 @@ spec:
                 configMapKeyRef:
                   name: {{ include "java-application.fullname" . }}
                   key: java-app-schema-registry-url
+            - name: TRUST_STORE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: java-app-trust-store
+            - name: TRUST_STORE_PWD
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: java-app-trust-store-pwd
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.java.image.repository }}:{{ .Values.java.image.tag | default .Chart.AppVersion }}"
