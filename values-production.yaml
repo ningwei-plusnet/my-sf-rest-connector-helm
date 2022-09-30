@@ -8,9 +8,9 @@ java:
     repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.2.10"
+    tag: "0.2.11"
   replicaCount: 1
-  appProfile: prod
+  appProfile: "prod"
   sfUser: "api02@plusnet.de"
   sfPassword: "Im-1R8mBAll"
   sfToken: "yeyzP5W41KQHEQQJquHw5zR5C"
@@ -21,6 +21,8 @@ java:
   kafkaProductionApiSecret: "ubC+ZP5WGkiMWcOIOyISzAvmAV438F7JLQaFEQIoCgxsZz8S6HUozpvDOggJ9FbU"
   schemaRegistryProductionAuthKey: "VWXD77DX6HLRL6H2"
   schemaRegistryProductionAuthSecret: "7knkL0v4TU11xqA+xQLDSSzbfT3weUMn/BAfAnygmatEEvV/qiaGYJZT1VZN8818"
+  trustStore: "cacerts-prod.jks"
+  trustStorePwd: "changeit"
 
 imagePullSecrets: []
 nameOverride: ""

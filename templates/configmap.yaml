@@ -9,4 +9,5 @@ data:
   java-app-profile: {{ .Values.java.appProfile | quote }}
   java-app-kafka-broker: {{ .Values.java.kafkaBroker | quote }}
   java-app-schema-registry-url: {{ .Values.java.schemaRegistryUrl | quote }}
-
+  java-app-trust-store: {{ .Values.java.trustStore | quote }}
+  java-app-trust-store-pwd: {{ .Values.java.trustStorePwd | quote }}
