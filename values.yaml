@@ -22,7 +22,6 @@ java:
   schemaRegistryProductionAuthKey: ""
   schemaRegistryProductionAuthSecret: ""
   trustStore: "/usr/app/cacerts.jks"
-  trustStorePwd: "changeit"
 
 imagePullSecrets: []
 nameOverride: ""
