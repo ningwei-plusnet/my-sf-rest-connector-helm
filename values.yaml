@@ -21,7 +21,7 @@ java:
   kafkaProductionApiSecret: ""
   schemaRegistryProductionAuthKey: ""
   schemaRegistryProductionAuthSecret: ""
-  trustStore: "cacerts.jks"
+  trustStore: "/usr/app/cacerts.jks"
   trustStorePwd: "changeit"
 
 imagePullSecrets: []
