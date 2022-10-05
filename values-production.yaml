@@ -8,13 +8,13 @@ java:
     repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.2.9-e"
+    tag: "0.2.9-c"
   replicaCount: 1
   appProfile: "prod"
   sfUser: "api02@plusnet.de"
   sfPassword: "Im-1R8mBAll"
   sfToken: "yeyzP5W41KQHEQQJquHw5zR5C"
-  sfEndpoint: "https://mona.plusnet.de/remote/plusnet.my.salesforce.com"
+  sfEndpoint: "https://plusnet.my.salesforce.com"
   kafkaBroker: "lkc-k8y0w6-p2r4m6.westeurope.azure.glb.confluent.cloud:9092"
   schemaRegistryUrl: "https://mona.plusnet.de/remote/schemaRegistry"
   kafkaProductionApiKey: "K6VWWOJULUV5GQ6B"
