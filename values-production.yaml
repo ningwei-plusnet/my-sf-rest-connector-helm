@@ -8,20 +8,20 @@ java:
     repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.2.9-u"
+    tag: "0.2.9-t"
   replicaCount: 1
   appProfile: "prod"
   sfUser: "api02@plusnet.de"
   sfPassword: "Im-1R8mBAll"
   sfToken: "yeyzP5W41KQHEQQJquHw5zR5C"
-  sfEndpoint: "https://mona.prod.plusnet.de/remote/plusnet.my.salesforce.com"
+  sfEndpoint: "https://mona.plusnet.de/remote/plusnet.my.salesforce.com"
   kafkaBroker: "lkc-k8y0w6-p2r4m6.westeurope.azure.glb.confluent.cloud:9092"
   schemaRegistryUrl: "https://mona.plusnet.de/remote/schemaRegistry"
   kafkaProductionApiKey: "K6VWWOJULUV5GQ6B"
   kafkaProductionApiSecret: "ubC+ZP5WGkiMWcOIOyISzAvmAV438F7JLQaFEQIoCgxsZz8S6HUozpvDOggJ9FbU"
   schemaRegistryProductionAuthKey: "VWXD77DX6HLRL6H2"
   schemaRegistryProductionAuthSecret: "7knkL0v4TU11xqA+xQLDSSzbfT3weUMn/BAfAnygmatEEvV/qiaGYJZT1VZN8818"
-  trustStore: "/usr/app/cacerts-prod.jks"
+  trustStore: "/cacerts-prod.jks"
   additionalArguments: "-Djdk.internal.httpclient.disableHostnameVerification=true -Djavax.net.debug=ssl -Dlogback.debug=true"
 
 imagePullSecrets: []
