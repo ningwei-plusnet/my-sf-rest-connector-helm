@@ -90,16 +90,11 @@ spec:
                 configMapKeyRef:
                   name: {{ include "java-application.fullname" . }}
                   key: java-app-trust-store
-            - name: LOGGING_DEBUG_ENABLED
+            - name: ADDITIONAL_ARGUMENTS
               valueFrom:
                 configMapKeyRef:
                   name: {{ include "java-application.fullname" . }}
-                  key: java-app-logback-debug-enabled
-            - name: JAVAX_SSL_DEBUG_ENABLED
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ include "java-application.fullname" . }}
-                  key: java-app-javax-ssl-debug-enabled
+                  key: java-app-additional-arguments
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.java.image.repository }}:{{ .Values.java.image.tag | default .Chart.AppVersion }}"
