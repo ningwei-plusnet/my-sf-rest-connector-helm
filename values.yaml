@@ -22,7 +22,8 @@ java:
   schemaRegistryProductionAuthKey: ""
   schemaRegistryProductionAuthSecret: ""
   trustStore: "cacerts.jks"
-  loggingDebugEnabled: "true"
+  logbackDebugEnabled: "false"
+  javaxSslDebugEnabled: "false"
 
 imagePullSecrets: []
 nameOverride: ""

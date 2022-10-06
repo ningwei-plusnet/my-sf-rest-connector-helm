@@ -10,4 +10,5 @@ data:
   java-app-kafka-broker: {{ .Values.java.kafkaBroker | quote }}
   java-app-schema-registry-url: {{ .Values.java.schemaRegistryUrl | quote }}
   java-app-trust-store: {{ .Values.java.trustStore | quote }}
-  java-app-logging-debug-enabled: {{ .Values.java.loggingDebugEnabled | quote }}
+  java-app-logback-debug-enabled: {{ .Values.java.logbackDebugEnabled | quote }}
+  java-app-javax-ssl-debug-enabled: {{ .Values.java.javaxSslDebugEnabled | quote }}
