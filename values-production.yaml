@@ -6,7 +6,7 @@
 java:
   image:
     repository: "ghcr.io/plusnet-de/sf-rest-connector"
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: "0.4.0"
   replicaCount: 1
@@ -22,7 +22,7 @@ java:
   schemaRegistryProductionAuthKey: "VWXD77DX6HLRL6H2"
   schemaRegistryProductionAuthSecret: "7knkL0v4TU11xqA+xQLDSSzbfT3weUMn/BAfAnygmatEEvV/qiaGYJZT1VZN8818"
   trustStore: "/usr/app/cacerts-prod.jks"
-  additionalArguments: "-Djavax.net.debug=ssl -Dlogback.debug=true"
+  additionalArguments: ""
 
 imagePullSecrets:
   - name: "ghcr-io-credentials"
