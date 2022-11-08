@@ -5,10 +5,10 @@
 
 java:
   image:
-    repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
-    pullPolicy: IfNotPresent
+    repository: "ghcr.io/plusnet-de/sf-rest-connector"
+    pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.3.2"
+    tag: "latest"
   replicaCount: 1
   appProfile: "default"
   sfUser: "api@plusnet.de.dev"
@@ -24,7 +24,8 @@ java:
   trustStore: "/usr/app/cacerts.jks"
   additionalArguments: ""
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: "ghcr-io-credentials"
 nameOverride: ""
 fullnameOverride: ""
 
