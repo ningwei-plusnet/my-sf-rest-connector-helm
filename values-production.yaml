@@ -8,7 +8,7 @@ java:
     repository: "ghcr.io/plusnet-de/sf-rest-connector"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.4.2"
+    tag: "0.4.3"
   replicaCount: 1
   appProfile: "prod"
   sfUser: "api02@plusnet.de"
