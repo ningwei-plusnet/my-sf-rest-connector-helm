@@ -6,9 +6,9 @@
 java:
   image:
     repository: "ghcr.io/plusnet-de/sf-rest-connector"
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.4.1"
+    tag: "latest"
   replicaCount: 1
   appProfile: "default"
   sfUser: "api@plusnet.de.dev"
@@ -52,8 +52,11 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  name: sf-rest-connector
   type: ClusterIP
-  port: 80
+  port: 8374
+  serviceMonitor:
+    enabled: true
 
 ingress:
   enabled: false

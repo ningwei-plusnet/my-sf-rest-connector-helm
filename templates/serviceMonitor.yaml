@@ -1,0 +1,20 @@
+{{ if .Values.service.serviceMonitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    {{- include "java-application.labels" . | nindent 4 }}
+    release: rancher-monitoring
+  name: {{ .Values.service.name }}
+spec:
+  endpoints:
+    - interval: 15s
+      port: http
+      path: /actuator/prometheus
+  jobLabel: {{ .Values.service.name }}
+  namespaceSelector:
+    any: true
+  selector:
+    matchLabels:
+      {{- include "java-application.labels" . | nindent 6 }}
+{{ end }}

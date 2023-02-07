@@ -101,7 +101,7 @@ spec:
           imagePullPolicy: {{ .Values.java.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 9080
+              containerPort: 8374
               protocol: TCP
           livenessProbe:
             exec:

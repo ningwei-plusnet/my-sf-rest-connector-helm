@@ -52,8 +52,11 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  name: sf-rest-connector
   type: ClusterIP
-  port: 80
+  port: 8374
+  serviceMonitor:
+    enabled: false
 
 ingress:
   enabled: false
