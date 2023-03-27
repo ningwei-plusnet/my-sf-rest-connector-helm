@@ -90,6 +90,11 @@ spec:
                 configMapKeyRef:
                   name: {{ include "java-application.fullname" . }}
                   key: java-app-trust-store
+            - name: METRICS_TOPIC_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: monitoring-metrics-topic
             - name: ADDITIONAL_ARGUMENTS
               valueFrom:
                 configMapKeyRef:

@@ -6,9 +6,11 @@
 java:
   image:
     repository: "ghcr.io/plusnet-de/sf-rest-connector"
+#    repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: "latest"
+#    tag: "0.3.3-b"
   replicaCount: 1
   appProfile: "default"
   sfUser: "api@plusnet.de.dev"
@@ -23,6 +25,10 @@ java:
   schemaRegistryProductionAuthSecret: ""
   trustStore: "/usr/app/cacerts.jks"
   additionalArguments: ""
+
+monitoring:
+  autoStartup: true
+  metricsKafkaTopic: metrics-sf-rest-connector
 
 imagePullSecrets:
   - name: "ghcr-io-credentials"

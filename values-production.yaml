@@ -24,6 +24,10 @@ java:
   trustStore: "/usr/app/cacerts-prod.jks"
   additionalArguments: ""
 
+monitoring:
+  autoStartup: true
+  metricsKafkaTopic: metrics-sf-rest-connector
+
 imagePullSecrets:
   - name: "ghcr-io-credentials"
 nameOverride: ""

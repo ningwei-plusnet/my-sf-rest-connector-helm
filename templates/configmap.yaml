@@ -11,3 +11,4 @@ data:
   java-app-schema-registry-url: {{ .Values.java.schemaRegistryUrl | quote }}
   java-app-trust-store: {{ .Values.java.trustStore | quote }}
   java-app-additional-arguments: {{ .Values.java.additionalArguments | quote }}
+  monitoring-metrics-topic: {{ .Values.monitoring.metricsKafkaTopic | quote }}
