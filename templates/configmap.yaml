@@ -12,3 +12,6 @@ data:
   java-app-trust-store: {{ .Values.java.trustStore | quote }}
   java-app-additional-arguments: {{ .Values.java.additionalArguments | quote }}
   monitoring-metrics-topic: {{ .Values.monitoring.metricsKafkaTopic | quote }}
+  monitoring-alert-from: {{ .Values.monitoring.alert.from | quote }}
+  monitoring-alert-to: {{ .Values.monitoring.alert.to | quote }}
+  monitoring-alert-service-name: {{ .Values.monitoring.alert.serviceName | quote }}

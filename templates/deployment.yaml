@@ -95,6 +95,21 @@ spec:
                 configMapKeyRef:
                   name: {{ include "java-application.fullname" . }}
                   key: monitoring-metrics-topic
+            - name: MONITORING_ALERT_FROM
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: monitoring-alert-from
+            - name: MONITORING_ALERT_TO
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: monitoring-alert-to
+            - name: MONITORING_ALERT_SERVICE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ include "java-application.fullname" . }}
+                  key: monitoring-alert-service-name
             - name: ADDITIONAL_ARGUMENTS
               valueFrom:
                 configMapKeyRef:

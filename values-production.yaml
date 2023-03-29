@@ -26,7 +26,11 @@ java:
 
 monitoring:
   autoStartup: true
-  metricsKafkaTopic: metrics-sf-rest-connector
+  metricsKafkaTopic: "metrics-sf-rest-connector"
+  alert:
+    from: "Devops@plusnet.de"
+    to: "ning.wei@plusnet.de"
+    serviceName: "Salesforce REST Connector"
 
 imagePullSecrets:
   - name: "ghcr-io-credentials"
