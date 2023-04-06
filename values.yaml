@@ -6,15 +6,17 @@
 java:
   image:
     repository: "ghcr.io/plusnet-de/sf-rest-connector"
-    pullPolicy: Always
+#    repository: "nexus.devops.plusnet.de:5000/container/sf-rest-connector"
+    pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "0.4.1"
+    tag: "latest"
+#    tag: "0.3.3-b"
   replicaCount: 1
   appProfile: "default"
-  sfUser: "api@plusnet.de.dev"
-  sfPassword: "Wi131#M8lN1_"
-  sfToken: "E3RCo8zsj9OAJyjCtdgG6FsB4"
-  sfEndpoint: "https://mona.cleo.plusnet.de/remote/plusnet--dev.sandbox.my.salesforce.com"
+  sfUser: "api02@plusnet.de.xdev"
+  sfPassword: "Im-1R8mBAll"
+  sfToken: "yeyzP5W41KQHEQQJquHw5zR5C"
+  sfEndpoint: "https://mona.cleo.plusnet.de/remote/plusnet--xdev.sandbox.my.salesforce.com"
   kafkaBroker: "kafka.svccleo.plusk.plusnet.de:31090"
   schemaRegistryUrl: "http://kafka-schema.soacleo.plusk.plusnet.de"
   kafkaProductionApiKey: ""
