@@ -22,7 +22,7 @@ java:
   schemaRegistryProductionAuthKey: "VWXD77DX6HLRL6H2"
   schemaRegistryProductionAuthSecret: "7knkL0v4TU11xqA+xQLDSSzbfT3weUMn/BAfAnygmatEEvV/qiaGYJZT1VZN8818"
   trustStore: "/usr/app/cacerts-prod.jks"
-  additionalArguments: ""
+  additionalArguments: "-Dspring.datasource.url=jdbc:oracle:thin:@ldap://10.153.32.101:389/ARSP1,cn=OracleContext,dc=prod -Dspring.datasource.username=aradmin -Dspring.datasource.password=ar83mi9"
 
 imagePullSecrets:
   - name: "ghcr-io-credentials"
